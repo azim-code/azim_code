@@ -13,6 +13,7 @@ class Genre(models.Model):
 class Movies(models.Model):
 
     name = models.CharField(max_length=100)
+    director = models.CharField(max_length=100,null=True)
     genre = models.ManyToManyField(Genre)
     # genre = models.CharField(max_length=100)
     popularity = models.FloatField(null=True)
